@@ -16,6 +16,7 @@ function App() {
 
   const axiosTours = async () => {
     setLoading(true)
+    
     try {
       const response = await axios(url);
       setData(response.data);
@@ -30,7 +31,7 @@ function App() {
   useEffect(() => {
    setTimeout(()=>{
      axiosTours();
-   },1300)
+   },3000)
 
 
   }, []);
