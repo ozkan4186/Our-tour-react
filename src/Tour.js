@@ -1,15 +1,29 @@
 import React, { useState } from 'react';
 
-const Tour = ({item}) => {
+
+const Tour = ({item,deleteTour}) => {
+  const [read, setRead] = useState(false)
+
+  // const {image,info,name,price,id}=item
+
   return(
-    <div>
-       <h2>tour component</h2>;
-
-    </div>
-
-  ) 
-  
- 
-}
+    <section className='single-tour'>
+      <img src={item.image} alt="" />
+      <footer>
+        <div className='tour-info'>
+          <h4>{item.name}</h4>
+          <h4 className='tour-price'>{item.price}</h4>
+        </div>
+        <p>
+         {read ? item.info:` ${item.info.substring(0,175)}...` }   
+         <button onClick={()=>setRead(!read)} >
+         {read? "show less":"read more"} 
+         </button>
+        </p>
+        <button onClick={()=>deleteTour(item.id)} className="delete-btn">Not Interested</button>
+      </footer>
+    </section>
+  );
+};
 
 export default Tour;

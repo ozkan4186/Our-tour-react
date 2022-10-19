@@ -1,23 +1,16 @@
 import React from 'react';
 import Tour from './Tour';
-const Tours = ({setData,data}) => {
-  // const [item, setİtem] = useState("")
-  return(
-    <div>
-      {data.map((item)=>{
-        return(
-          <div key={item.id} >
-            <Tour  item={item}/>
-          </div>
-        )
-       
-     
+const Tours = ({setData,data,deleteTour}) => {
+  // const [item, setItem] = useState("")
 
-       })}
+  return (
+    <div className='section'>
+      {
+        data.map((item,index)=> <Tour key={index}  item={item} deleteTour={deleteTour} />)
+      }
+
     </div>
   )
-
- 
 };
 
 export default Tours;
