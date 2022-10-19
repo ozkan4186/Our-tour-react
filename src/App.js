@@ -3,13 +3,13 @@ import Loading from './Loading'
 import Tours from './Tours'
 // ATTENTION!!!!!!!!!!
 // I SWITCHED TO PERMANENT DOMAIN
-const url = 'https://course-api.com/react-tours-project'
+
 function App() {
+const url = 'https://course-api.com/react-tours-project'
 
 
 
 
-  
   return 
   <h2>
   
